@@ -1,0 +1,19 @@
+logging:
+  level:
+    org:
+      atmosphere: warn
+
+server:
+  port: ${PORT:8080}
+
+spring:
+  application:
+    name: vaadin-tippyjs
+  mustache:
+    check-template-location: false
+
+vaadin:
+  allowed-packages: com.vaadin,org.vaadin,dev.hilla,com.github.nikbucher
+  launch-browser: true
+  pnpm:
+    enable: true

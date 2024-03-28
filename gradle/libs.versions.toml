@@ -1,0 +1,18 @@
+[versions]
+java = "21"
+spring-boot = "3.2.4" # https://docs.spring.io/spring-boot/docs/current/reference/html/index.html
+vaadin = "24.3.8" # https://vaadin.com/docs/latest/
+
+[libraries]
+spring-boot-bom = { module = "org.springframework.boot:spring-boot-dependencies", version.ref = "spring-boot" }
+vaadin-bom = { module = "com.vaadin:vaadin-bom", version.ref = "vaadin" }
+
+spring-boot-devtools = { module = "org.springframework.boot:spring-boot-devtools" }
+spring-boot-starter = { module = "org.springframework.boot:spring-boot-starter" }
+spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test" }
+vaadin-core = { module = "com.vaadin:vaadin-core" }
+vaadin-spring-boot-starter = { module = "com.vaadin:vaadin-spring-boot-starter" }
+
+[plugins]
+spring-boot = { id = "org.springframework.boot", version.ref = "spring-boot" }
+vaadin = { id = "com.vaadin", version.ref = "vaadin" }
