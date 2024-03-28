@@ -4,7 +4,7 @@ An opinionated sample demo for a [Tippy.js](https://atomiks.github.io/tippyjs/) 
 
 ![Screenshot](Screenshot.png)
 
-## Usage
+## Sample usage
 
 ```java
 @Route("")
