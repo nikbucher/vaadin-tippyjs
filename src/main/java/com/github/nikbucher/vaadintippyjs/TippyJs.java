@@ -3,6 +3,7 @@ package com.github.nikbucher.vaadintippyjs;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.dependency.NpmPackage;
+import com.vaadin.flow.dom.Element;
 import elemental.json.Json;
 import elemental.json.JsonArray;
 import elemental.json.JsonObject;
@@ -12,10 +13,10 @@ import elemental.json.JsonValue;
 @JsModule("./src/tippy-loader.js")
 public class TippyJs {
 
-	private final Component component;
+	private final Element element;
 
 	public TippyJs(Component component) {
-		this.component = component;
+		this.element = component.getElement();
 	}
 
 	public static TippyJs forComponent(Component component) {
@@ -47,7 +48,13 @@ public class TippyJs {
 						))
 				))
 		);
-		component.getElement().executeJs("setTooltip(this, $0)", props);
+		element.addAttachListener(event -> {
+			element.executeJs("setTooltip(this, $0)", props);
+		});
+	}
+
+	public void unset() {
+		element.executeJs("unsetTooltip(this)");
 	}
 
 	public enum ContentMode {

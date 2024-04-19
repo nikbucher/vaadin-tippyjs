@@ -4,13 +4,18 @@ import 'tippy.js/dist/tippy.css';
 import 'tippy.js/themes/light-border.css';
 
 (function () {
-	function setTooltip(el, config) {
+	function unsetTooltip(el) {
 		if (el._tippy) {
 			el._tippy.destroy();
 			delete el._tippy;
 		}
+	}
+
+	function setTooltip(el, config) {
+		unsetTooltip(el);
 		tippy(el, config);
 	}
 
+	window.unsetTooltip = unsetTooltip;
 	window.setTooltip = setTooltip;
 })();
