@@ -1,5 +1,7 @@
 # vaadin-tippyjs
 
+> **Archived:** This project is no longer maintained. Vaadin now provides a native [Popover](https://vaadin.com/docs/latest/components/popover) component, which should be used instead.
+
 An opinionated sample demo for a [Tippy.js](https://atomiks.github.io/tippyjs/) tooltip with HTML in [Vaadin](https://vaadin.com/docs/latest/).
 
 ![Screenshot](Screenshot.png)
